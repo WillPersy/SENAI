@@ -1,0 +1,15 @@
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\bin\Debug\net6.0\back-aula.exe
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\bin\Debug\net6.0\back-aula.deps.json
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\bin\Debug\net6.0\back-aula.runtimeconfig.json
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\bin\Debug\net6.0\back-aula.dll
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\bin\Debug\net6.0\back-aula.pdb
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.csproj.AssemblyReference.cache
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.AssemblyInfoInputs.cache
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.AssemblyInfo.cs
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.csproj.CoreCompileInputs.cache
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.dll
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\refint\back-aula.dll
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.pdb
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\back-aula.genruntimeconfig.cache
+C:\Users\OI417392\Desktop\DEV\BACK-END\back-aula\obj\Debug\net6.0\ref\back-aula.dll
