@@ -1,16 +1,25 @@
-﻿using Back_End_ER02.Classes;
+﻿using back_aula.Classes;
+
 
 PessoaFisica novaPF = new PessoaFisica();
+Endereco novoEndPf = new Endereco();
 
-novaPF.nome = "William persy";
+novaPF.nome = "William Persy";
 novaPF.cpf = "12345678910";
 novaPF.rendimento = 6600.5f;
+novaPF.dataNasc = new DateTime(2000, 10, 01);
 
-// >>> Pessoa Física <<<
-float impostaPagar = novaPF.CalcularImposto (novaPF.rendimento);
-Console.WriteLine($"{impostaPagar:0.00}");
-Console.WriteLine(impostaPagar.ToString("C"));
+novoEndPf.logradouro = "Rua Deocleciano de Oliveira";
+novoEndPf.numero = 240;
+novoEndPf.complemento = "Casa";
+novoEndPf.endComercial = true;
 
-// >>> Pessoa Juridica <<<
-PessoaJuridica novaPj = new PessoaJuridica();
-Console.WriteLine(novaPj.CalcularImposto(6600.5f));
+novaPF.endereco = novoEndPf;
+
+Console.WriteLine(@$"
+Nome: {novaPF.nome}, 
+Rendimento: {novaPF.rendimento} 
+Cpf: {novaPF.cpf} 
+Logradouro: {novaPF.endereco.logradouro}
+Numero: {novaPF.endereco.numero}
+");

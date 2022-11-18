@@ -1,6 +1,7 @@
+using back_aula.Classes;
 using back_aula.Interface;
 
-namespace Back_End_ER02.Classes
+namespace back_aula.Classes
 {
     public class PessoaJuridica : Pessoa, IPessoaJuridica
     {

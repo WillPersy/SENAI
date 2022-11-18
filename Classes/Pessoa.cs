@@ -1,5 +1,7 @@
 using back_aula.Interface;
-namespace Back_End_ER02.Classes
+using back_aula.Classes;
+
+namespace back_aula.Classes
 
 {
     public abstract class Pessoa : IPessoa
@@ -8,7 +10,7 @@ namespace Back_End_ER02.Classes
 
         public float rendimento { get; set; }
 
-        public string? endereco { get; set; }
+        public Endereco? endereco { get; set; }
 
         public abstract float CalcularImposto(float rendimento);
        
