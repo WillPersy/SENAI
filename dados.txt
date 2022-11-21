@@ -1,0 +1,23 @@
+cnpj - limpo e sem pontos, barra e traço : 14
+cnpj - com todos os caracteres : 
+
+=================================================================================
+ 
+REGEX - verdadeiro ok true / falso não ok false
+
+Argumento 1 /
+
+Argumento 2 / mascara/padrao = exemplo: _ _ . _ _ _ . _ _ _ / _ _ _ _ . _ _ . 
+
+=================================================================================
+
+SUBSTRING - 
+
+William Persy
+0123456
+
+0,7 >> "William"
+
+4,3 >> "ano"
+
+==========================================================================================

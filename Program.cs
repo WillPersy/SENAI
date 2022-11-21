@@ -1,25 +1,19 @@
 ﻿using back_aula.Classes;
 
+PessoaJuridica novaPj = new PessoaJuridica();
+Endereco novoEndPj = new Endereco();
 
-PessoaFisica novaPF = new PessoaFisica();
-Endereco novoEndPf = new Endereco();
+novaPj.nome = "Nome - PJ";
+novaPj.razaoSocial = "Razão Social - PJ";
+novaPj.cnpj = "00.000.000/0001-03";
 
-novaPF.nome = "William Persy";
-novaPF.cpf = "12345678910";
-novaPF.rendimento = 6600.5f;
-novaPF.dataNasc = new DateTime(2000, 10, 01);
+novoEndPj.logradouro = "Rua Deocleciano de Oliveira ";
+novoEndPj.numero = 1251;
 
-novoEndPf.logradouro = "Rua Deocleciano de Oliveira";
-novoEndPf.numero = 240;
-novoEndPf.complemento = "Casa";
-novoEndPf.endComercial = true;
-
-novaPF.endereco = novoEndPf;
+novaPj.endereco = novoEndPj;
 
 Console.WriteLine(@$"
-Nome: {novaPF.nome}, 
-Rendimento: {novaPF.rendimento} 
-Cpf: {novaPF.cpf} 
-Logradouro: {novaPF.endereco.logradouro}
-Numero: {novaPF.endereco.numero}
+Nome: {novaPj.nome}
+Razão Social: {novaPj.razaoSocial}
+CNPJ: {novaPj.cnpj} - Valido: {novaPj.ValidarCnpj(novaPj.cnpj)}
 ");
