@@ -1,23 +1,10 @@
-cnpj - limpo e sem pontos, barra e traço : 14
-cnpj - com todos os caracteres : 
-
-=================================================================================
- 
-REGEX - verdadeiro ok true / falso não ok false
-
-Argumento 1 /
-
-Argumento 2 / mascara/padrao = exemplo: _ _ . _ _ _ . _ _ _ / _ _ _ _ . _ _ . 
-
-=================================================================================
-
-SUBSTRING - 
-
-William Persy
-0123456
-
-0,7 >> "William"
-
-4,3 >> "ano"
-
-==========================================================================================
+Console.writeline
+Console.write
+Console.Readline - solicita entrada via teclado / aguardar
+Console.resetcolor - Reinicia cores
+Console.backgroundcolor - Muda cores de fundo
+Console.foregroundcolor - Coloca cor do caracter
+Thread.sleep (1s ==> 1000ms) aguardar
+Console.clear - Limpar
+Criar nova classe - Utils
+Criar metodo estatico
