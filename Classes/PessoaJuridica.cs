@@ -35,7 +35,7 @@ namespace back_aula.Classes
         }
 
         public bool ValidarCnpj(string cnpj)
-        {  // 00.476.645/0001-03
+        { 
            bool retornoCnpjValido = Regex.IsMatch(cnpj, @"^(\d{14})|(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})$");
 
            if (retornoCnpjValido)
