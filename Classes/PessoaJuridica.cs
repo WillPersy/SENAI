@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using back_aula.Interface;
+using back_aula.Classes;
 
 namespace back_aula.Classes
 {
@@ -9,6 +10,8 @@ namespace back_aula.Classes
         public string? Cnpj { get; set; }
 
         public string? RazaoSocial { get; set; }
+
+        public string caminho { get; private set;} = "Database/PessoaJuridica.csv";
 
 
 
@@ -33,6 +36,7 @@ namespace back_aula.Classes
         }
 
 
+       
         public bool ValidarCnpj(string cnpj)
         {
 
@@ -63,6 +67,36 @@ namespace back_aula.Classes
             }
 
             return false;
+
+        }
+
+        public void Inserir (PessoaJuridica pj) {
+            Utils.VerificarPastaArquivo(caminho);
+            string[] pjValores = {$"{pj.Nome},{pj.Cnpj},{pj.RazaoSocial}"};
+            File.AppendAllLines(caminho, pjValores);
+        }
+
+        public List<PessoaJuridica> LerArquivo(){
+            
+            List<PessoaJuridica> listPj = new List<PessoaJuridica>();
+            string[] linhas = File.ReadAllLines(caminho);
+
+            foreach (string cadaLinha in linhas)
+            {
+                string[] atributos = cadaLinha.Split(",");
+      
+            
+            PessoaJuridica CadaPj = new PessoaJuridica();
+
+            CadaPj.Nome = atributos[0];
+            CadaPj.Cnpj = atributos[1];
+            CadaPj.RazaoSocial = atributos[2];
+
+            listPj.Add(CadaPj);
+            
+            } 
+
+            return listPj;
 
         }
     }

@@ -1,8 +1,8 @@
 using back_aula.Interface;
 
-namespace back.Classes
+namespace back_aula.Classes
 {
-    public class PessoaFisica : IPessoa, IPessoaFisica
+    public class PessoaFisica : Pessoa, IPessoaFisica
     {
 
         public string? Cpf { get; set; }
