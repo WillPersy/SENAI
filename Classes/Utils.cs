@@ -1,22 +1,21 @@
 namespace back_aula.Classes
 {
-    public static class Utils
+    static class Utils
     {
-        public static void BarraCarregamento(string texto){
-            
-            Console.Clear();
-
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+        public static void BarraCarregamento(string texto, int tempo, int quantidade)
+        {
             Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow;
 
-            Console.Write($"{texto}");
-            for (int i = 0; i < 8; i++)
+            Console.Write(texto);
+
+            for (var contador = 0; contador < quantidade; contador++)
             {
-                Console.Write($"=");
-                Thread.Sleep(200);    
+                Console.Write(".");
+                Thread.Sleep(tempo);
             }
-            Console.ResetColor(); 
-            Console.Clear();
+
+            Console.ResetColor();
         }
     }
 }

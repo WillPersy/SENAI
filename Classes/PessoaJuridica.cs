@@ -1,64 +1,69 @@
 using System.Text.RegularExpressions;
-using back_aula.Classes;
 using back_aula.Interface;
 
 namespace back_aula.Classes
 {
     public class PessoaJuridica : Pessoa, IPessoaJuridica
     {
-        public string? cnpj { get; set; }
-        public string? razaoSocial { get; set; }
 
-        public override float CalcularImposto(float rendimento)
+        public string? Cnpj { get; set; }
+
+        public string? RazaoSocial { get; set; }
+
+
+
+        public override float PagarImposto(float rendimento)
         {
-            if (rendimento <= 3000 )
-            {   
-               return rendimento * 0.03f;
-                
-            } else if (rendimento > 3000 && rendimento <= 6000 )
+            if (rendimento <= 3000)
             {
-                return rendimento * 0.05f;
+                return rendimento * .03f;
 
-            } else if (rendimento > 6000 && rendimento <= 10000 )
+            }else if (rendimento <= 6000)
             {
-                return rendimento * 0.07f;
+                return rendimento * .05f;
 
-            } else 
+            }else if (rendimento <= 10000)
             {
-                return rendimento * 0.09f;
-            } 
+                return rendimento * .07f;
+
+            }else
+            {
+                return rendimento * .09f;
+            }
         }
 
-        internal void ValidarCnpj()
-        {
-            throw new NotImplementedException();
-        }
 
         public bool ValidarCnpj(string cnpj)
-        { 
-           bool retornoCnpjValido = Regex.IsMatch(cnpj, @"^(\d{14})|(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})$");
+        {
 
-           if (retornoCnpjValido)
-           {
-                string subStringCnpj14 = cnpj.Substring(8, 4);
+            bool retornoCnpjValido = Regex.IsMatch(cnpj, @"(^(\d{2}.\d{3}.\d{3}/\d{4}-\d{2})|(\d{14})$)");
 
-                if (subStringCnpj14 == "0001")
+            if (retornoCnpjValido == true)
+            {
+                if (cnpj.Length == 18)
                 {
-                    return true;
+                    string subStringCnpj = cnpj.Substring(11, 4);
+
+                    if (subStringCnpj == "0001")
+                    {
+                        return true;
+                    }
+
+
                 }
-    
-           }
-
-           string subStringCnpj18 = cnpj.Substring (11, 4);
-
-                if (subStringCnpj18 == "0001")
+                else if (cnpj.Length == 14)
                 {
-                    return true;
+                    string subStringCnpj = cnpj.Substring(8, 4);
+
+                    if (subStringCnpj == "0001")
+                    {
+                        return true;
+                    }
                 }
+            }
 
             return false;
-        
-          
+
         }
     }
 }

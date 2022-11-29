@@ -1,41 +1,50 @@
 using back_aula.Interface;
-namespace back_aula.Classes
+
+namespace back.Classes
 {
-    public class PessoaFisica : Pessoa , IPessoaFisica
+    public class PessoaFisica : IPessoa, IPessoaFisica
     {
-        public string? cpf { get; set; }
+
+        public string? Cpf { get; set; }
 
         public DateTime dataNasc { get; set; }
 
-        public override float CalcularImposto(float rendimento)
+
+
+        public override float PagarImposto(float rendimento)
         {
-            if (rendimento <= 1500 )
+            if (rendimento <= 1500)
             {
-               return 0;
-                
-            } else if (rendimento > 1500 && rendimento <= 3500 )
+                return 0;
+
+            }else if (rendimento > 1500 && rendimento <= 3500)
             {
                 float resultado = (rendimento / 100) * 2;
+
                 return resultado;
 
-            } else if (rendimento > 3500 && rendimento <= 6000 )
+            }else if (rendimento > 3500 && rendimento <= 6000)
             {
                 float resultado = (rendimento / 100) * 3.5f;
-                return resultado; 
+            
 
-            } else 
+                return resultado;
+
+            }else
             {
                 float resultado = (rendimento / 100) * 5;
-                return resultado;
-            } 
 
+                return resultado;
+            }
+            
+            
         }
 
         public bool ValidarDataNasc(DateTime dataNasc)
         {
             DateTime dataAtual = DateTime.Today;
+
             double anos = (dataAtual - dataNasc).TotalDays / 365;
-            Console.WriteLine(anos);
 
             if (anos >= 18)
             {
@@ -48,18 +57,23 @@ namespace back_aula.Classes
 
         public bool ValidarDataNasc(string dataNasc)
         {
-            if (DateTime.TryParse(dataNasc, out DateTime dataConvertida))
+
+            DateTime dataConvertida;
+
+            if (DateTime.TryParse(dataNasc, out dataConvertida))
             {
                 DateTime dataAtual = DateTime.Today;
+
                 double anos = (dataAtual - dataConvertida).TotalDays / 365;
-                Console.WriteLine(anos);
 
                 if (anos >= 18)
                 {
                     return true;
                 }
 
+                return false;
             }
+
             return false;
 
         }
